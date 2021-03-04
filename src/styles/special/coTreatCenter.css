@@ -1,0 +1,283 @@
+.videoLogo {
+  text-align: center;
+  font-size: 24px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 0px;
+  background-size: 60%;
+  height: 250px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.videoLogo p {
+  text-align: center;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.division_line {
+  margin-top:5%;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.consultation_div1 {
+  display: flex;
+  margin-left: 90px;
+}
+
+.consultation_basic {
+  margin-left: 180px;
+  margin-top: 30px;
+}
+.consultation_basic1{
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.title {
+  margin: 40px 0px;
+}
+
+.subtitle {
+  color: #ff9966;
+  border-bottom: 2px solid #ff9966;
+  padding: 30px 0px 10px 20px;
+}
+
+.checkbox {
+  line-height: 40px;
+  height: 40px;
+  /* border: 1px solid #ccc; */
+  width: 550px;
+  margin-bottom: 8px;
+  padding: 0px 10px;
+}
+
+/* 第三部 */
+
+.details {
+  width: 400px;
+  background-color: #d7d7d7;
+  margin: 0 auto;
+}
+
+.details_title {
+  text-align: center;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.buttom_div {
+  margin: 0 auto;
+  width: 150px;
+}
+
+.part_four1 {
+  display: initial;
+  margin-left: 30px;
+}
+
+.part_four2 {
+  display: flex;
+}
+
+.item-list-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-label {
+  word-break: keep-all;
+}
+
+.part-item {
+  padding: 5px 0;
+}
+
+.part-input {
+  height: 36px;
+  line-height:36px;
+}
+
+
+/* 第四步 */
+
+.diagnosed .el-radio {
+  line-height: 50px;
+  height: 50px;
+}
+
+.part_four {
+  margin-top: 15px;
+}
+
+.buttom_div2 {
+  float: right;
+}
+
+
+/* 就诊人信息 */
+
+.patients_info {
+  margin-top: 40px;
+}
+
+.caption {
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  font-weight: normal;
+}
+
+.caption span {
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+
+.caption {
+  display: flex;
+}
+
+.caption .el-input {
+  width: 120px;
+  margin-right: 20px;
+}
+
+.drug_herad {
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addDeug {
+  margin-left: 60%;
+}
+
+.drug_herad .r {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.retreat {
+  margin-top: 40px;
+}
+
+.drug_list li {
+  list-style: none;
+}
+
+.drug_list .del_btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+}
+
+.drug_list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  justify-content: space-between;
+  border-bottom: 1px solid #c9c9c9;
+  padding-bottom: 16px;
+}
+
+.drug_list li:last-child {
+  border-bottom: none;
+}
+
+.drug_list .drug_info {
+  display: flex;
+  align-items: center;
+}
+
+.drug_list .drug_info .del_btn {
+  margin-right: 10px;
+}
+
+.drug_list .drug_info {
+  display: flex;
+}
+
+.drug_info .drug_name .rim {
+  background-color: #ff9933;
+  border-radius: 50%;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  margin: 0px 12px;
+}
+.remote-video {
+  height: 850px;
+  width: 490px;
+}
+.totalPrices {
+  font-weight: bold;
+  color: #ff0000;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.hangupthephone{
+  margin-left: 50%;
+  margin-top: 20%;
+}
+.totalPrices span {
+  margin-right: 18px;
+}
+
+.rise-num {
+  display: flex;
+  align-items: center;
+}
+
+.rise-num .rise {
+  margin-right: 20px;
+}
+
+.rise-num .num {
+  width: 100px;
+  display: flex;
+  border: 1px solid #ccc;
+  padding: 4px 2px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rise-num .num p {
+  width: 80px;
+  text-align: center;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+}
+
+.payment p {
+  margin-right: 18px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.yellow {
+  color: #ff9933;
+}

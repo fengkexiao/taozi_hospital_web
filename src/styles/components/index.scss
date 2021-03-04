@@ -1,0 +1,82 @@
+/* 组件共通样式 */
+
+// 变量
+@import "./variables";
+// 选择覆盖element-ui的样式
+@import "./element-ui";
+
+// 共通单属性
+.app-container {
+  // padding: 20px;
+  background-color: #fff;
+  min-height: calc(100vh - 154px);
+}
+.box-card {
+  margin-top: 5px;
+}
+.pointer {
+  cursor: pointer;
+}
+.padding-none {
+  padding: 0px;
+}
+.color-red {
+  color: red;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
+.margin-left-40 {
+  margin-left: 40px;
+}
+.display-inline-block {
+  display: inline-block;
+}
+.form-input-width {
+  max-width: 350px;
+}
+// 身份证等长文字输入
+.max-width-300 {
+  max-width: 320px;
+}
+
+// flex布局
+.contain-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+// 分页样式
+.peach-pagination {
+  text-align: right;
+  margin-top: 15px;
+}
+
+// 图片样式
+.peach-image {
+  width: 146px;
+  height: 146px;
+}
+
+// 浅蓝色
+.lightskyblue {
+  background-color: lightskyblue;
+}
+// 用于form表单中的必填红色星号：*，实际非必填，但视觉显示为必填项
+.form-required > .el-form-item__label:before {
+  content: "*";
+  margin-right: 4px;
+  color: #f56c6c;
+}

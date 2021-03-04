@@ -1,0 +1,67 @@
+// 云药房相关api
+export default {
+  API_LIST_MEDICINE: {
+    // 云药房订单管理
+    INTERFACE_GET_MEDICINE_ORDER_FOR_HOSPITAL_BY_PAGE: "api/medicine/goodsOrder/getOrderForHospitalByPage",
+    // 云药房订单详情
+    INTERFACE_GET_MEDICINE_GET_ORDERS: "api/medicine/goodsOrder/getOrderInfo",
+    // 发货
+    INTERFACE__MEDICINE_ORDER_DELIVER: "api/medicine/goodsOrder/orderDeliver",
+    // 云药房获取分页药品列表
+    INTERFACE_GET_GOODSRECOMMEND_POST_WITHUSAGE: "api/medicine/medicineGoods/getGoodsListWithUsage",
+    INTERFACE_GET_GOODSRECOMMEND_POST_RECOMMENDLIST: "api/medicine/medicineGoods/getGoodsList",
+    // 云药房获取分页药品列表
+    INTERFACE_POST_SAVEMDEICINETEMPLATE: "api/medicine/medicineTemplate/save",
+    // 云药房获取添加药品
+    INTERFACE_POST_ADD_GOODS: "api/medicine/medicineGoods/addGoods",
+    // 云药房订单发货
+    INTERFACE_POST_ORDERDELIVER: "api/medicine/goodsOrder/orderDeliver",
+    // 上架
+    INTERFACE_GET_UPPER_SHELF: "api/medicine/medicineGoods/disableGoods",
+    // 删除
+    INTERFACE_POST_DELETE: "api/medicine/medicineGoods/removeGoods",
+    // 查询-批准文号查询药品信息
+    INTERFACE_GET_DRUG_INFO_XY: "api/medicine/medicineProduct/getMedicineByApproveNo",
+    // 查询-药品名字查询
+    INTERFACE_GET_DRUG_INFO_ZY: "api/medicine/medicineProduct/searchMedicine",
+    // 云药房修改药品
+    INTERFACE_POST_MODIFY_GOODS: "api/medicine/medicineGoods/updateGoods",
+    // 查询处方模板目录
+    INTERFACE_GET_GETLIST: "api/medicine/rpTemplate/getList",
+    // 保存处方模板目录
+    INTERFACE_POST_SAVELIST: "api/medicine/rpTemplate/saveList",
+    // 删除模板目录
+    INTERFACE_POST_DELETETEMPLATE: "api/medicine/rpTemplate/deleteTemplate",
+    // 保存处方模板
+    INTERFACE_POST_SAVERPTEMPLATE: "api/medicine/rpTemplate/saveRpTemplate",
+    // 查询处方模板
+    INTERFACE_GET_GETRPTEMPLATE: "api/medicine/rpTemplate/getRpTemplate",
+    // 根据药品id删除模板
+    INTERFACE_GET_DELMEDICIENINFO: "api/medicine/rpTemplate/delMedicienInfo",
+    // 根据药品id查询药品信息
+    INTERFACE_TMC_MEDICINEINFO: "api/medicine/rpTemplate/getMedicineInfo",
+    // 模版相关
+    // 获取处方模版
+    INTERFACE_GET_FINDLIST: "api/medicine/rpTemplate/findList",
+    // 获取模版用药
+    INTERFACE_GET_FINDMEDICIENBYID: "api/medicine/rpTemplate/findMedicienById",
+    // 批量获取处方
+    INTERFACE_GET_GETRPDETAILS: "api/rp/prescription/getRpsByList",
+    // 获取医院名称
+    INTERFACE_NURSE_ORDERS_PRICE_FOUR: "api/peachUser/hospitalMng/getHospitalNameById",
+    // 确认收货
+    INTERFACE_CONFIRM_RECEIPT: "api/medicine/goodsOrder/receivingGoods",
+    // 获取快递公司
+    INTERFACE_CONFIRM_GETEXPRESS: "api/medicine/goodsOrder/getExpress",
+    // 处方订单来源
+    INTERFACE_GET_HOSPITALUSER_ORGPARAS: "api/hospitalUser/orgPara/getOrgParasByValue",
+    // 退款
+    INTERFACE_POST_MEDICINE_REFUND: "api/medicine/goodsOrder/refund",
+    // 互联网退款
+    INTERFACE_POST_MEDICINE_OTHERREFUND: "api/medicine/goodsOrder/otherRefund",
+    //分页条件查询药品库存（新增接口）
+    INTERFACE_STOCK_LIST: "api/medicine/medicineStock/list",
+    //库存预警
+    INTERFACE_STOCK_WARNING: "api/medicine/medicineStock/update"
+  }
+};

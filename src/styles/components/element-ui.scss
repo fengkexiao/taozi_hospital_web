@@ -1,0 +1,188 @@
+// 选择覆盖element-ui的样式
+
+// 表格
+.el-table .el-form-item--mini.el-form-item,
+.el-table .el-form-item--small.el-form-item {
+  margin-bottom: 0px;
+}
+.el-table .el-form-item .el-form-item__error {
+  position: relative;
+}
+
+// 输入框
+.el-input,
+.el-textarea {
+  max-width: $input-max-width;
+}
+.el-input {
+  max-width: 200px;
+}
+// form表单
+.el-form-item .el-input__count {
+  line-height: initial;
+  right: 20px;
+}
+// 多选下拉框
+.multiple-select-width > .el-input {
+  max-width: 500px;
+  width: 300px;
+}
+// 级联选择器
+.el-cascader > .el-input {
+  max-width: 500px;
+  width: 300px;
+}
+
+// 上传
+.el-upload-dragger {
+  width: 146px;
+  height: 146px;
+  border: none;
+  line-height: 12px;
+  .el-icon-upload {
+    font-size: 20px;
+    margin: 40px 0 0 0;
+    line-height: 40px;
+  }
+  .el-upload__text {
+    font-size: 12px;
+  }
+}
+.el-upload-list--picture-card {
+  display: flex;
+  img {
+    object-fit: scale-down;
+  }
+  .el-upload-list__item {
+    margin: 0 8px 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.el-upload-list--has-item .el-upload-list__item:last-child {
+  margin: 0 8px 0 0;
+}
+.el-upload__tip {
+  margin: 0;
+}
+
+// 图片
+.el-image {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+// 日历
+.el-calendar .is-selected {
+  color: #1989fa;
+}
+.schedule-calendar {
+  font-size: 15px;
+  // 日历标题字体大小
+  $schedule-calendar-title-size: 15px;
+  .el-calendar__header {
+    width: 70%;
+  }
+  th {
+    font-size: $schedule-calendar-title-size;
+  }
+  .el-calendar__body {
+    display: flex;
+    & > .el-calendar-table {
+      width: calc(70% - 28px);
+    }
+    & > div {
+      width: calc(30% - 12px);
+      margin-top: 60px;
+      margin-left: 20px;
+    }
+    .table-cell-box {
+      width: calc(100% * 7 / 3 / 8);
+      height: $schedule-calendar-cell-height + 2;
+      border: 1px solid #ebeef5;
+      border-bottom: none;
+      margin-right: 20px;
+      & + span {
+        height: $schedule-calendar-cell-height + 2;
+        line-height: $schedule-calendar-cell-height + 2;
+      }
+    }
+  }
+}
+.schedule-calendar .el-calendar-table td {
+  &.is-disabled {
+    @extend %disabled;
+  }
+  .el-calendar-day {
+    font-size: 15px;
+    padding: 0;
+    height: $schedule-calendar-cell-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+    &:hover {
+      background-color: inherit;
+      color: inherit;
+    }
+  }
+}
+
+// 时间范围
+.el-date-editor--daterange.el-input__inner {
+  width: 395px;
+}
+
+// 模态框
+.el-dialog__header {
+  text-align: center;
+}
+.el-dialog__footer {
+  text-align: center;
+}
+
+.el-table__header-wrapper,.el-table__fixed-header-wrapper {
+  th {
+    height: 52px;
+    background-color: #fafafa;
+    border-bottom: 0 !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+.el-table__body {
+  td {
+    height: 52px;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+.messageDangerIcon {
+  color: #f56c6c !important;
+} 
+.btn-custom-cancel {
+  float: right;
+  margin-left: 30px;
+}
+.btn-rule-cancel {
+  width: 88px;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.btn-rule-confirm {
+  width: 88px;
+  margin-top: 30px;
+  background-color: #fe5853 !important;
+  border-color: #fe5853 !important;
+}
+.messageContent {
+  font-weight: 700;
+}

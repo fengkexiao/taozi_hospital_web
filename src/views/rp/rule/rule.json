@@ -1,0 +1,759 @@
+[
+  {
+    "name": "患者信息",
+    "children": [
+      {
+        "name": "年龄",
+        "tag": "患者",
+        "expression": "${patient.patientAge}$",
+        "dataType": "number",
+        "icon": "N",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "体重（pdd无）",
+        "tag": "患者",
+        "expression": "${patient.patientWeight}$",
+        "dataType": "number",
+        "icon": "N",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "性别",
+        "tag": "患者",
+        "expression": "${patient.patientSex}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "男", "value": "1"},
+          {"name": "女", "value": "2"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "既往病史",
+        "tag": "患者",
+        "expression": "${patient.sicknessDetail}$",
+        "dataType": "array",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "过敏史",
+        "tag": "患者",
+        "expression": "${patient.allergyDetail}$",
+        "dataType": "array",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否妊娠（pdd无）",
+        "tag": "患者",
+        "expression": "${getIsGestation()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否哺乳（pdd无）",
+        "tag": "患者",
+        "expression": "${getIsLactation()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否备孕（pdd无）",
+        "tag": "患者",
+        "expression": "${getIsPreparation()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肝功能",
+        "tag": "患者",
+        "expression": "${patient.liver}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "正常", "value": "0"},
+          {"name": "异常", "value": "1"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肾功能",
+        "tag": "患者",
+        "expression": "${patient.renal}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "正常", "value": "0"},
+          {"name": "异常", "value": "1"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      }
+    ]
+  },
+  {
+    "name": "处方诊断",
+    "children": [
+      {
+        "name": "药品名称",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${medicine.medicineName}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "复诊凭证（pdd无）",
+        "tag": "处方",
+        "expression": "${patient.reInquiry}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "有", "value": "1"},
+          {"name": "无", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "主诉",
+        "tag": "处方",
+        "expression": "${patient.illDesc}$",
+        "dataType": "array",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "主诊断",
+        "tag": "处方",
+        "expression": "${patient.primaryDiagnosis}$",
+        "dataType": "array",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "给药途径",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${medicine.takeDirection}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "药品数量",
+        "tag": "处方",
+        "expression": "${getMedicineAmount()}$",
+        "dataType": "number",
+        "icon": "N",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "用药天数（pdd无）",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${medicine.medicationDays}$",
+        "dataType": "number",
+        "icon": "N",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否超盒数",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverAmount()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否超天数（pdd无）",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverDays()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "超盒数提示",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverAmountTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "超天数提示（pdd无）",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverDaysTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否超频次",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverFrequence()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否超单次剂量",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverTakeDose()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否超每日剂量",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsOverDoseForDay()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否匹配规格",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsMatchSpecification()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否匹配给药途径",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsMatchTakeDirection()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否是高风险药品",
+        "tag": "处方",
+        "tags": "药品",
+        "expression": "${getIsHighRiskMedicine()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {
+            "name": "是",
+            "value": "1"
+          },
+          {
+            "name": "否",
+            "value": "0"
+          }
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      }
+    ]
+  },
+  {
+    "name": "开方药品信息",
+    "children": [
+      {
+        "name": "过敏成份",
+        "tag": "药品",
+        "expression": "${getAllergyIngredient()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "适应症",
+        "tag": "药品",
+        "expression": "${getIndications()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "可否量化用量",
+        "tag": "药品",
+        "expression": "${medicine.quality}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否是抗生素",
+        "tag": "药品",
+        "expression": "${rule.isAntibiotic}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否是免疫抑制剂",
+        "tag": "药品",
+        "expression": "${rule.isImmunosuppressant}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "是否是精神类药物",
+        "tag": "药品",
+        "expression": "${rule.isPsychotropic}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "是", "value": "1"},
+          {"name": "否", "value": "0"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "主诊断适应性",
+        "tag": "药品",
+        "expression": "${getPrimaryDiagnosisSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "男性适应性",
+        "tag": "药品",
+        "expression": "${getManSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "女性适应性",
+        "tag": "药品",
+        "expression": "${getWoManSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肝功能适应性",
+        "tag": "药品",
+        "expression": "${getLiverSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肾功能适应性",
+        "tag": "药品",
+        "expression": "${getRenalSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "备孕适应性",
+        "tag": "药品",
+        "expression": "${getPreparationSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "哺乳适应性",
+        "tag": "药品",
+        "expression": "${getLactationSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "妊娠适应性",
+        "tag": "药品",
+        "expression": "${getGestationSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "儿童适应性",
+        "tag": "药品",
+        "expression": "${getChildSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "老年人适应性",
+        "tag": "药品",
+        "expression": "${getOlderSuit()}$",
+        "dataType": "enum",
+        "icon": "E",
+        "enumList": [
+          {"name": "不限", "value": "0"},
+          {"name": "禁用", "value": "1"},
+          {"name": "忌用", "value": "2"},
+          {"name": "慎用", "value": "3"},
+          {"name": "酌量", "value": "4"}
+        ],
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      }
+    ]
+  },
+  {
+    "name": "提示信息",
+    "children": [
+      {
+        "name": "主诊断适应性提示",
+        "tag": "提示",
+        "expression": "${getPrimaryDiagnosisTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "备孕提示",
+        "tag": "提示",
+        "expression": "${getPreparationTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "哺乳提示",
+        "tag": "提示",
+        "expression": "${getLactationSuitTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "妊娠提示",
+        "tag": "提示",
+        "expression": "${getGestationSuitTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "男性适应性提示",
+        "tag": "提示",
+        "expression": "${getManTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "女性适应性提示",
+        "tag": "提示",
+        "expression": "${getWoManTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肝功能适应性提示",
+        "tag": "提示",
+        "expression": "${getLiverTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "肾功能适应性提示",
+        "tag": "提示",
+        "expression": "${getRenalTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "小孩适应性提示",
+        "tag": "提示",
+        "expression": "${getChildTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      },
+      {
+        "name": "老年人适应性提示",
+        "tag": "提示",
+        "expression": "${getOlderTip()}$",
+        "dataType": "string",
+        "icon": "T",
+        "typeValue": "",
+        "dataValue": "",
+        "conditionList": []
+      }
+    ]
+  }
+]

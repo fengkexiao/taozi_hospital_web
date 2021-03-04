@@ -1,0 +1,16 @@
+// 自定义共通变量
+// 输入框最大宽度
+$input-max-width: 500px;
+// 禁用背景颜色
+$background-color-disabled: #f5f7fa;
+// 日历单元格高度
+$schedule-calendar-cell-height: 30px;
+// 禁用样式
+%disabled {
+  background-color: $background-color-disabled;
+  color: #c0c4cc;
+  cursor: not-allowed;
+  * {
+    cursor: not-allowed;
+  }
+}

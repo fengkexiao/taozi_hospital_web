@@ -1,0 +1,19 @@
+{
+  "number":[
+    {"name": ">（大于）","value": "<greater>"},
+    {"name": ">=（大于等于）","value": "<greater_equals>"},
+    {"name": "=（等于）","value": "<equals>"},
+    {"name": "<=（小于等于）","value": "<less_equals>"},
+    {"name": "<（小于）","value": "<less>"}
+  ],
+  "enum": [
+    {"name": "=（等于）","value": "<equals>"}
+  ],
+  "rests": [
+    {"name": "=（等于）","value": "<equals>"},
+    {"name": "⊇（包含）","value": "<contains>"},
+    {"name": "!⊇（不包含）","value": "<notContains>"},
+    {"name": "∈（属于）","value": "<belong>"},
+    {"name": "∉（不属于）","value": "<notBelong>"}
+  ]
+}
